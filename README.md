@@ -1,4 +1,5 @@
-![1_2KdEtbQJbX6r-ARyM1smSA](https://user-images.githubusercontent.com/79866006/155039005-16850ab5-9395-4c17-a89e-e80de4f4a150.png)
+
+![images (4)](https://user-images.githubusercontent.com/79866006/155046047-74a5721a-9a53-4617-9e94-a1ec0d53c61a.jpeg)
 
 
 # Hangman Game Python Version 
@@ -13,127 +14,156 @@ In other sources, the game is called “Gallows”, “The Game of Hangin”, or
 This is a simple Hangman game using Python programming language. 
 Beginners can use this as a small project to boost their programming skills and understanding logic.
 
+# Hangman Game in different Languages :
+
+<a href="https://github.com/The-Young-Programmer/Hangman-_-ASM"/><img src="https://img.shields.io/badge/WebAssembly-654FF0?style=for-the-badge&logo=Assembly&logoColor=white"/></a>
+<a href="https://github.com/The-Young-Programmer/Hangman-Game.git"/><img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"/></a>
+<a href="https://github.com/The-Young-Programmer/Hangman-Game.py"/><img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue"/></a>
+
+
 # Code Review 
 ### NOTE 
->> Run the program on your terminal.
->> 
->> Use the latest version of python. Python v3.8 and above
-To Check your python version:
+Run the program on your terminal.
 
-run 'python --version' in your command line either (Windows), shell (Mac), or terminal (Linux/Ubuntu). 
-To check your Python version in your script, run 'import sys' to get the module and use 'sys.version' to find detailed version information in your code.
+Use the latest version of python. Python v3.8 and above
+To Check your python version:
+run ' python --version ' in your command line either (Windows), shell (Mac), or terminal (Linux/Ubuntu). 
+To check your Python version in your script, run ' import sys ' to get the module and use ' sys.version ' to find detailed version information in your code.
 
 '''
->>> import sys
->>> sys.version
-'3.9.10 (v3.9.10:d047928ae3f6, Febuary 22 2022, 00:06:53) '
+
+           >>> import sys
+           >>> sys.version
+               3.9.10 (v3.9.10:d047928ae3f6, Febuary 22 2022, 00:06:53)
+               
 '''
 
 # 
 [^1]: Import the random module.
 
 '''
- import random 
 
-from collections import Counter 
+         import random 
+
+         from collections import Counter 
+         
 '''
 
-[^2]: Here, a random word (a fruit name) is picked up from the collections.
+[^2]:  Here, a random word (a fruit name) is picked up from the collections.
 
 '''
-#######
+
+             someWords = """apple banana mango strawberry orange grape pineapple apricot lemon coconut watermelon pearnectarine blueberry      pomegranate starfruit plum raspberry mandarin jackfruit kiwi lime apricot avocado peach cherry papaya berry peach lychee muskmelon"""
+
+
+               someWords = someWords.split(" ")
+                 # randomly choose a secret word from our "someWords" LIST.
+
+               word = random.choice(someWords)
+
+
+            if __name__ == "__main__":
+
+           print("Guess the word! HINT: word is a name of a fruit")
+
 '''
 
 [^3]: For printing the empty spaces for letters of the word 
 
 '''
-     # For printing the empty spaces for letters of the word 
+             
+             # For printing the empty spaces for letters of the word 
 
-        print('_', end = ' ')
+                 print('_', end = ' ')
 
-    print() 
+            print() 
 
   
 
-    playing = True
+             playing = True
+             
 '''
 
 [^4]: For convenience, we have given length of word + 2 chances. 
 In this way, all letters of the word are to be guessed before all the chances are over.
 
 '''
-     # list for storing the letters guessed by the player 
+            
+             # list for storing the letters guessed by the player 
 
-    letterGuessed = ''                 
+                letterGuessed = ''                 
 
-    chances = len(word) + 2
+                chances = len(word) + 2
 
-    correct = 0
+                 correct = 0
 
-    flag = 0
+                flag = 0
 
-    try: 
+               try: 
 
-        while (chances != 0) and flag == 0: #flag is updated when the word is correctly guessed  
+                     while (chances != 0) and flag == 0: #flag is updated when the word is correctly guessed  
 
-            print() 
+                         print() 
 
-            chances -= 1
+                       chances -= 1
+                       
 '''
 
 [^5]: We create a decision-making process, to check that the user only enters alphabets and not numbers as a name.
 
 '''
-try: 
 
-                guess = str(input('Enter a letter to guess: ')) 
+                     try: 
 
-            except: 
+                            guess = str(input('Enter a letter to guess: ')) 
 
-                print('Enter only a letter!') 
+                         except: 
 
-                continue
+                                print('Enter only a letter!') 
+
+                              continue
 
   
 
-            # Validation of the guess 
+                            # Validation of the guess 
 
-            if not guess.isalpha(): 
+                               if not guess.isalpha(): 
 
-                print('Enter only a LETTER') 
+                                 print('Enter only a LETTER') 
 
-                continue
+                               continue
 
-            elif len(guess) > 1: 
+                            elif len(guess) > 1: 
 
-                print('Enter only a SINGLE letter') 
+                             print('Enter only a SINGLE letter') 
 
-                continue
+                             continue
 
-            elif guess in letterGuessed: 
+                              elif guess in letterGuessed: 
 
-                print('You have already guessed that letter') 
+                                 print('You have already guessed that letter') 
 
-                continue
+                                continue
+                                
 '''
 
 [^6]: When a letter in that word is guessed correctly, that letter position in the word is made visible. 
 
 '''
 
-            if guess in word: 
+                      if guess in word: 
 
-                k = word.count(guess) #k stores the number of times the guessed letter occurs in the word 
+                           k = word.count(guess) #k stores the number of times the guessed letter occurs in the word 
 
-                for _ in range(k):     
+                          for _ in range(k):     
 
-                    letterGuessed += guess # The guess letter is added as many times as it occurs 
+                                 letterGuessed += guess # The guess letter is added as many times as it occurs 
 
   
 
-            # Print the word 
+                               # Print the word 
 
-            for char in word: 
+                                  for char in word: 
 
                 if char in letterGuessed and (Counter(letterGuessed) != Counter(word)): 
 
@@ -169,26 +199,24 @@ try:
 
 '''
 
+                         # If user has used all of his chances 
+
+                      if chances <= 0 and (Counter(letterGuessed) != Counter(word)): 
+
+                         print() 
+
+                            print('You lost! Try again..') 
   
-
-        # If user has used all of his chances 
-
-        if chances <= 0 and (Counter(letterGuessed) != Counter(word)): 
-
-            print() 
-
-            print('You lost! Try again..') 
-
-            print('The word was {}'.format(word)) 
+                             print('The word was {}'.format(word)) 
             
-            print()
+                                print()
             
-            # autor contact
-            print('Contact TYP for more programming code')
+                                # autor contact
+                        print('Contact TYP for more programming code')
             
-            print('Search Google for :')
+                        print('Search Google for :')
             
-            print ('The Young Programmer Nemonet')
+                         print ('The Young Programmer Nemonet')
 
 '''
 
@@ -196,32 +224,42 @@ try:
 
 '''
 
-    except KeyboardInterrupt: 
+           except KeyboardInterrupt: 
 
-        print() 
+               print() 
 
-        print('Bye! Try again.') 
+                 print('Bye! Try again.') 
 
-exit()
+               exit()
 
 '''
 
 # Code Demo:
 
 '''
-Guess the word! HINT: word is a name of a fruit
-_ _ _ _ 
 
-Enter a letter to guess: m
-_ _ m _ 
-Enter a letter to guess: i
-_ i m _ 
-Enter a letter to guess: l
-l i m _ 
-Enter a letter to guess: e
-l e m e
-Congratulations, You won!
+            Guess the word! HINT: word is a name of a fruit
+                        _ _ _ _ 
+
+             Enter a letter to guess: m
+              _ _ m _ 
+             Enter a letter to guess: i
+              _ i m _ 
+             Enter a letter to guess: l
+             l i m _ 
+              Enter a letter to guess: e
+              l i m e
+              Congratulations, You won!
+              
 '''
+
+
+
+
+
+
+
+
 
 
 
