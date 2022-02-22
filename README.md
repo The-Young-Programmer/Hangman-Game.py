@@ -28,36 +28,36 @@ Run the program on your terminal.
 Use the latest version of python. Python v3.8 and above
 To Check your python version:
 
-run > 'python --version' in your command line either (Windows), shell (Mac), or terminal (Linux/Ubuntu). 
+run > ''*python --version*'' in your command line either (Windows), shell (Mac), or terminal (Linux/Ubuntu). 
 
-To check your Python version in your script, run > 'import sys' to get the module 
+To check your Python version in your script, run > ''*import sys*'' to get the module 
 
-and use > 'sys.version' to find detailed version information in your code.
+and use > ''*sys.version*'' to find detailed version information in your code.
 
 
-'''
+
 
            >>> import sys
            >>> sys.version
                3.9.10 (v3.9.10:d047928ae3f6, Febuary 22 2022, 00:06:53)
                
-'''
+
 
 
 ### Import the random module.
 
-'''
+
 
          import random 
 
          from collections import Counter 
          
-'''
+
 
 
 ### Here, a random word (a fruit name) is picked up from the collections.
 
-'''
+
 
              someWords = """apple banana mango strawberry orange grape pineapple apricot lemon coconut watermelon pearnectarine blueberry      pomegranate starfruit plum raspberry mandarin jackfruit kiwi lime apricot avocado peach cherry papaya berry peach lychee muskmelon"""
 
@@ -72,12 +72,12 @@ and use > 'sys.version' to find detailed version information in your code.
 
            print("Guess the word! HINT: word is a name of a fruit")
 
-'''
+
 
 
 ### For printing the empty spaces for letters of the word 
 
-'''
+
              
              # For printing the empty spaces for letters of the word 
 
@@ -89,14 +89,14 @@ and use > 'sys.version' to find detailed version information in your code.
 
              playing = True
              
-'''
+
 
 
 ### For convenience, we have given length of word + 2 chances. 
 
 In this way, all letters of the word are to be guessed before all the chances are over.
 
-'''
+
             
              # list for storing the letters guessed by the player 
 
@@ -116,12 +116,12 @@ In this way, all letters of the word are to be guessed before all the chances ar
 
                        chances -= 1
                        
-'''
+
 
 
 ### We create a decision-making process, to check that the user only enters alphabets and not numbers as a name.
 
-'''
+
 
                      try: 
 
@@ -155,12 +155,12 @@ In this way, all letters of the word are to be guessed before all the chances ar
 
                                 continue
                                 
-'''
+
 
 
 ### When a letter in that word is guessed correctly, that letter position in the word is made visible. 
 
-'''
+
 
                       if guess in word: 
 
@@ -204,12 +204,12 @@ In this way, all letters of the word are to be guessed before all the chances ar
 
                     print('_', end = ' ') 
 
-'''
+
 
 
 ### If user use all of chances 
 
-'''
+
 
                          # If user has used all of his chances 
 
@@ -230,12 +230,12 @@ In this way, all letters of the word are to be guessed before all the chances ar
             
                          print ('The Young Programmer Nemonet')
 
-'''
+
 
 
 ### To exit the game 
 
-'''
+
 
            except KeyboardInterrupt: 
 
@@ -245,12 +245,12 @@ In this way, all letters of the word are to be guessed before all the chances ar
 
                exit()
 
-'''
+
 
 
 # Code Demo:
 
-'''
+
 
             Guess the word! HINT: word is a name of a fruit
                         _ _ _ _ 
@@ -265,7 +265,7 @@ In this way, all letters of the word are to be guessed before all the chances ar
               l i m e
               Congratulations, You won!
               
-'''
+
 
 #
 
