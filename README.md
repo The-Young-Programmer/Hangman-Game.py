@@ -16,7 +16,7 @@ Beginners can use this as a small project to boost their programming skills and 
 
 # Hangman Game in different Languages :
 
-<a href="https://github.com/The-Young-Programmer/Hangman-_-ASM"/><img src="https://img.shields.io/badge/WebAssembly-654FF0?style=for-the-badge&logo=Assembly&logoColor=white"/></a>
+<a href="https://github.com/The-Young-Programmer/Hangman-_-ASM"/><img src="https://img.shields.io/badge/WebAssembly-654FF0?style=for-the-badge&logo=WebAssembly&logoColor=white"/></a>
 <a href="https://github.com/The-Young-Programmer/Hangman-Game.git"/><img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"/></a>
 <a href="https://github.com/The-Young-Programmer/Hangman-Game.py"/><img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue"/></a>
 
@@ -27,8 +27,13 @@ Run the program on your terminal.
 
 Use the latest version of python. Python v3.8 and above
 To Check your python version:
-run ' python --version ' in your command line either (Windows), shell (Mac), or terminal (Linux/Ubuntu). 
-To check your Python version in your script, run ' import sys ' to get the module and use ' sys.version ' to find detailed version information in your code.
+
+run > 'python --version' in your command line either (Windows), shell (Mac), or terminal (Linux/Ubuntu). 
+
+To check your Python version in your script, run > 'import sys' to get the module 
+
+and use > 'sys.version' to find detailed version information in your code.
+
 
 '''
 
@@ -38,8 +43,8 @@ To check your Python version in your script, run ' import sys ' to get the modul
                
 '''
 
-# 
-[^1]: Import the random module.
+
+### Import the random module.
 
 '''
 
@@ -49,7 +54,8 @@ To check your Python version in your script, run ' import sys ' to get the modul
          
 '''
 
-[^2]:  Here, a random word (a fruit name) is picked up from the collections.
+
+### Here, a random word (a fruit name) is picked up from the collections.
 
 '''
 
@@ -68,7 +74,8 @@ To check your Python version in your script, run ' import sys ' to get the modul
 
 '''
 
-[^3]: For printing the empty spaces for letters of the word 
+
+### For printing the empty spaces for letters of the word 
 
 '''
              
@@ -84,7 +91,9 @@ To check your Python version in your script, run ' import sys ' to get the modul
              
 '''
 
-[^4]: For convenience, we have given length of word + 2 chances. 
+
+### For convenience, we have given length of word + 2 chances. 
+
 In this way, all letters of the word are to be guessed before all the chances are over.
 
 '''
@@ -109,7 +118,8 @@ In this way, all letters of the word are to be guessed before all the chances ar
                        
 '''
 
-[^5]: We create a decision-making process, to check that the user only enters alphabets and not numbers as a name.
+
+### We create a decision-making process, to check that the user only enters alphabets and not numbers as a name.
 
 '''
 
@@ -147,7 +157,8 @@ In this way, all letters of the word are to be guessed before all the chances ar
                                 
 '''
 
-[^6]: When a letter in that word is guessed correctly, that letter position in the word is made visible. 
+
+### When a letter in that word is guessed correctly, that letter position in the word is made visible. 
 
 '''
 
@@ -195,7 +206,8 @@ In this way, all letters of the word are to be guessed before all the chances ar
 
 '''
 
-[^7]: If user use all of chances 
+
+### If user use all of chances 
 
 '''
 
@@ -220,7 +232,8 @@ In this way, all letters of the word are to be guessed before all the chances ar
 
 '''
 
-[^8]: To exit the game 
+
+### To exit the game 
 
 '''
 
@@ -233,6 +246,7 @@ In this way, all letters of the word are to be guessed before all the chances ar
                exit()
 
 '''
+
 
 # Code Demo:
 
@@ -253,7 +267,7 @@ In this way, all letters of the word are to be guessed before all the chances ar
               
 '''
 
-
+#
 
 
 
